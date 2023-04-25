@@ -1,0 +1,53 @@
+{
+  "name": "banasiowe-trolololo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build": "mix",
+    "watch-server": "nodemon index.js",
+    "watch-assets": "mix watch",
+    "watch": "concurrently \"npm:watch-server\" \"npm:watch-assets\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olafsozanski/banasiowe-trolololo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olafsozanski/banasiowe-trolololo/issues"
+  },
+  "homepage": "https://github.com/olafsozanski/banasiowe-trolololo#readme",
+  "dependencies": {
+    "alpinejs": "^3.10.5",
+    "bcrypt": "^5.1.0",
+    "bootstrap": "^5.2.2",
+    "debounce": "^1.2.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "moment": "^2.29.4",
+    "mongoose": "^6.6.4",
+    "nodemailer": "^6.8.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "trix": "^2.0.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "concurrently": "^7.4.0",
+    "laravel-mix": "^6.0.49",
+    "nodemon": "^2.0.20",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.55.0",
+    "sass-loader": "^12.6.0"
+  }
+}

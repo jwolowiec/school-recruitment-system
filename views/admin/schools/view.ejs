@@ -1,0 +1,84 @@
+<%- include('../../_partials/header') %>
+<div class="container my-3">
+    <h2><%= school.name %></h2>
+
+    <div class="actions">
+        <a href="/admin/schools/<%= school._id %>/edit" class="btn btn-primary">Edytuj</a>
+        <form action="/admin/schools/<%= school._id %>/delete" method="post" class="inline-form">
+            <button type="submit" class="btn btn-danger">Usuń</button>
+        </form>
+    </div>
+
+    <div class="details">
+        <div class="detail">
+            <div class="detail-label">
+                Adres
+            </div>
+            <div class="detail-content">
+                <%= school.address %>,&nbsp;<%= school.zipCode %>&nbsp;<%= school.city %>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="detail-label">
+                Adres email
+            </div>
+            <div class="detail-content">
+                <%= school.email %>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="detail-label">
+                Numer telefonu
+            </div>
+            <div class="detail-content">
+                <%= school.phone %>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="detail-label">
+                Opis
+            </div>
+            <div class="detail-content">
+                <%= school.description %>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="mt-4">Profile</h3>
+
+    <div class="actions">
+        <a href="/admin/schools/<%= school._id %>/school-profiles/create" class="btn btn-primary">Utwórz</a>
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Profil</th>
+            <th>Opis</th>
+            <th>Liczba dostępnych miejsc</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% school.profiles.forEach((profile) => { %>
+            <tr>
+                <td>
+                    <div>
+                        <a href="/admin/school-profiles/<%= profile._id %>"><%= profile.name %></a>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <div><%= profile.description %></div>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <div><%= profile.availablePlaces %></div>
+                    </div>
+                </td>
+            </tr>
+        <% }); %>
+        </tbody>
+    </table>
+</div>
+<%- include('../../_partials/footer') %>

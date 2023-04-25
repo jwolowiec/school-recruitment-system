@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@import "../../node_modules/bootstrap/scss/functions";
+
+@import "variables";
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import './components/generic/actions.scss';
+@import './components/generic/details.scss';
+@import './components/generic/forms.scss';
+@import './components/generic/navbar.scss';
+@import './components/generic/page-container.scss';
+@import './components/generic/tables.scss';
+@import './components/generic/typography.scss';
+
+@import './components/features/user-item.scss';
+@import './components/features/school-item.scss';
+
+@import "../../node_modules/trix/dist/trix.css";
